@@ -1,0 +1,166 @@
+/* Variáveis CSS */
+:root {
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Cards personalizados */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Cards de resumo financeiro */
+.card-receita {
+    border-left: 4px solid var(--success-color);
+}
+
+.card-despesa {
+    border-left: 4px solid var(--danger-color);
+}
+
+.card-saldo {
+    border-left: 4px solid var(--info-color);
+}
+
+/* Valores monetários */
+.valor-positivo {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.valor-negativo {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+.valor-neutro {
+    color: var(--info-color);
+    font-weight: bold;
+}
+
+/* Tabelas */
+.table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+/* Botões personalizados */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Badges de categoria */
+.badge-receita {
+    background-color: var(--success-color);
+}
+
+.badge-despesa {
+    background-color: var(--danger-color);
+}
+
+/* Formulários */
+.form-control, .form-select {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Navbar personalizada */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Gráficos */
+.chart-container {
+    position: relative;
+    height: 400px;
+    margin: 20px 0;
+}
+
+/* Alertas personalizados */
+.alert {
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
